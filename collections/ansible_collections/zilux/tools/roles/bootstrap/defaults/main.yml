@@ -1,0 +1,11 @@
+---
+# defaults file for roles/basehost
+basehost_rpms:
+  - python3
+  - git
+  - lsof
+  - vim
+  - tar
+  - mlocate
+  - bind-utils
+  - chrony

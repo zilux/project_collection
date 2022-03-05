@@ -1,0 +1,17 @@
+---
+- name: Check some state of hosts
+  hosts: all
+  # hosts: localhost
+  # connection: local
+  gather_facts: false
+  become: true
+  tasks:
+
+  roles:
+    - role: zilux.tools.check
+      vars:
+        melding: Just a Test
+
+    - role: zilux.tools.bootstrap
+      vars:
+        active: false
