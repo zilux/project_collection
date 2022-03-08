@@ -5,13 +5,22 @@
   # connection: local
   gather_facts: false
   become: true
+  collections:
+     - zilux.tools
   tasks:
 
+
+  pre_tasks:
+
+  - name: begin message
+    include_tasks: debug.yml
+
   roles:
-    - role: zilux.tools.check
+    #- role: zilux.tools.check
+    - role: check
       vars:
         melding: Just a Test
 
-    - role: zilux.tools.bootstrap
-      vars:
-        active: false
+  #  - role: zilux.tools.bootstrap
+  #    vars:
+  #      active: false
